@@ -1,0 +1,388 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+body {
+    background-image: url(./pexels-rostislav-uzunov-5011647.jpg);
+    /* width: 100%;
+    height: 100vh; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    padding: 0.8vw 0.3vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img {
+    cursor: pointer;
+    width: 15%;
+
+
+}
+
+.links ul {
+    display: flex;
+    align-items: center;
+    margin-right: 5vw;
+    background-color: rgba(119, 194, 237, 0.7);
+    border-radius: 20px;
+    padding: 0.4vw 0;
+
+}
+
+.links ul li a {
+    margin: 0 2vw;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1vw;
+    text-align: center;
+
+
+}
+
+.links ul li a:hover {
+    transition: all ease 0.2s;
+    border-bottom: 2px solid #ef4a82;
+    color: #77C2ED;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons i {
+    font-size: 1vw;
+    color: white;
+    margin-right: 2vw;
+}
+
+.icons i:hover {
+    border-bottom: 1px solid #ef4a82;
+    color: #77C2ED;
+}
+
+#btn-menu {
+    font-size: 1vw;
+    font-weight: 600;
+    color: white;
+    display: none;
+
+}
+
+header .search-form {
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    height: 2vw;
+    background: white;
+    border-radius: 5px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all ease 0.3s;
+
+}
+header .search-form.active{
+    transform: scaleY(1);
+
+}
+
+header .search-form input {
+    width: 100%;
+    height: 100%;
+    font-size: 1vw;
+    color: black;
+    padding: 1vw;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+
+}
+
+header .search-form i {
+    cursor: pointer;
+    font-size: 1vw;
+    color: black;
+    margin-right: 1vw;
+}
+
+.cart-cont {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 20vw;
+    padding: 0 1.5vw;
+    background-color: rgb(240, 234, 234,0.7);
+    /* height: calc(100% - 80px); */
+    transition: all ease 0.3s;
+}
+.cart-cont.active{
+    right: 0%;
+}
+
+.cart-cont .cart-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 1.5vw;
+    margin: 2vw 0;
+}
+
+.cart-item img {
+    width: 40px;
+}
+
+.cart-item .content {
+    margin-left: 5vw;
+}
+
+.cart-item .content .price {
+    color: #77C2ED;
+    text-shadow: 2px 2px 15px rgb(169, 205, 230);
+}
+
+.cart-cont .button {
+    margin: 1vw auto;
+    width: 100%;
+    padding: 0.3vw 0;
+    border: none;
+    box-shadow: 2px 3px 20px grey;
+    background-color: #77C2ED;
+    color: white;
+    transition: all ease 0.2s;
+}
+
+.cart-cont .button:hover {
+    letter-spacing: 0.1vw;
+}
+.profile{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 20vw;
+    padding: 1vw 1.5vw;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(240, 234, 234,0.7);
+    /* height: calc(100% - 80px); */
+    transition: all ease 0.3s;
+    display: block;
+}
+.profile.active{
+right: 0%;
+}
+.profile img{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.profile button{
+    padding: 0.4vw 0.6vw;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #77C2ED;
+    color: white;
+    transition: all ease 0.3s;
+}
+.profile button:hover{
+
+    letter-spacing: 0.1vw;
+}
+.profile .setting{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.setting p span{
+    color: white;
+    text-align: center;
+}
+.setting p span:hover{
+    color: #77C2ED;
+}
+.setting i{
+    margin-left: 5px;
+    font-weight: 600;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+}
+.home{
+    padding: 15vw 6vw;
+    color: white;
+display: flex;
+justify-content: space-between;
+
+}
+.content{
+    width: 50%;
+}
+.home h1 span{
+    color: #ef4a82;
+    font-weight: 600;
+}
+.home p{
+    width: 60%;
+    color: rgb(199, 184, 184);
+    font-size: 14px;
+}
+.home .btn{
+    margin-top: 20px;
+    color: white;
+    border: white;
+    border: 2px solid white;
+    padding: 0.3vw 0.8vw;
+    transition: all ease 0.2s;
+}
+.home .btn1{
+    margin-left: 5px;
+    background-color: white;
+    color:#005f96;
+    font-weight: 700;  
+}
+.home .btn:hover{
+  letter-spacing: 0.1vw;
+ 
+}
+.home img{
+ width: 15vw;
+ height: 14vw;
+ position: absolute;
+ bottom: 0;
+ right: 10%;
+ animation: rocket 4s infinite;
+}
+@keyframes rocket{
+    0%{top: 70%;}
+    25%{
+        top: 65%;
+    }
+    50%{
+        top: 60%;
+    }
+    75%{
+        top: 70%;
+    }
+    100%{
+        top: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width:650px) {
+    nav img {
+        cursor: pointer;
+        width: 30%;
+        height: 4vw;
+    
+    
+    }
+    #btn-menu {
+        display: block;font-size: 3vw;
+        color: white;
+        margin-right: 2vw;
+        padding: 2vw;
+    }
+
+    .links {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 20rem;
+        height: calc(100vh - 80px);
+   
+
+    }
+    .links.active{
+        right: 0%;
+    }
+    .icons i {
+        font-size: 3vw;
+        color: white;
+        margin-right: 2vw;
+        padding: 2vw;
+    }
+   
+
+    .links ul {
+        background-color: rgb(255, 255, 255 ,0.7);
+        display: block;
+        width: 100%;
+
+    }
+
+    .links ul li a {
+      
+        margin: 5rem 3rem;
+        color: black;
+        display: block;
+        font-size: 0.5rem;
+    }
+    .links ul li a:hover{
+        color: #77C2ED;
+        opacity: 1;
+    }
+    header .search-form{
+        width: 90%;
+        height: 1rem;
+    }
+    .cart-cont {
+        position: absolute;
+        top: 100%;
+    border-radius: 10px;
+        width: 30vw;
+       
+        padding: 0 1.5vw;
+        background-color: rgb(255, 255, 255,0.7);
+        /* height: calc(100% - 80px); */
+    }
+    .profile{
+        width: 50vw;
+    }
+}
